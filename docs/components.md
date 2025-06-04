@@ -28,6 +28,10 @@ Ionic apps are made of high-level building blocks called Components, which allow
     <p>Action Sheets display a set of options with the ability to confirm or cancel an action.</p>
   </DocsCard>
 
+<DocsCard header="Accordion" href="api/accordion" icon="/icons/component-accordion-icon.png">
+  <p>Accordion is a vertically stacked list of items, where each item can be expanded to reveal its content or collapsed to hide it.</p>
+</DocsCard>
+
 <DocsCard header="Alert" href="api/alert" icon="/icons/component-alert-icon.png">
   <p>Alerts are a great way to offer the user the ability to choose a specific action or list of actions.</p>
 </DocsCard>

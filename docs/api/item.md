@@ -163,7 +163,7 @@ import Controls from '@site/static/usage/v8/item/content-types/controls/index.md
 
 ## Clickable Items
 
-An item is considered "clickable" if it has an `href` or `button` property set. Clickable items have a few visual differences that indicate they can be interacted with. For example, a clickable item receives the ripple effect upon activation in `md` mode, has a highlight when activated in `ios` mode, and has a [detail arrow](#detail-arrows) by default in `ios` mode.
+An item is considered 'clickable' if it has an href or button property set, or if it uses a framework's [routerLink](https://ionicframework.com/docs/api/router-link) directive/component. Clickable items have a few visual differences that indicate they can be interacted with. For example, a clickable item receives the ripple effect upon activation in `md` mode, has a highlight when activated in `ios` mode, and has a [detail arrow](#detail-arrows) by default in `ios` mode.
 
 import Clickable from '@site/static/usage/v8/item/clickable/index.md';
 
