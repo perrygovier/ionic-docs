@@ -15,10 +15,6 @@
   <ion-item button disabled="true">
     <ion-label>Disabled Button Item</ion-label>
   </ion-item>
-  
-  <ion-item router-link="#" router-direction="forward">
-    <ion-label>Clickable Item (router-link)</ion-label>
-  </ion-item>
 </template>
 
 <script lang="ts">

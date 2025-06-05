@@ -15,7 +15,4 @@
   <ion-label>Disabled Button Item</ion-label>
 </ion-item>
 
-<ion-item routerLink="#" routerDirection="forward">
-  <ion-label>Clickable Item (routerLink)</ion-label>
-</ion-item>
 ```

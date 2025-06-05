@@ -35,6 +35,12 @@
           <ion-item button disabled="true">
             <ion-label>Disabled Button Item</ion-label>
           </ion-item>
+          <!--
+            Note: router-link (or routerLink) functionality relies on a routing library being configured.
+            In a full Ionic Vanilla JavaScript application, you would use Ionic's Web Component router
+            (<ion-router>, <ion-router-outlet>, and <ion-route> definitions) for this to work.
+            This playground tab is a simple HTML/JS snippet and does not include a full router setup.
+          -->
           <ion-item href="#" onclick="alert('Navigating via JS!')">
             <ion-label>Clickable Item (JS onclick)</ion-label>
           </ion-item>

@@ -20,10 +20,6 @@ function Example() {
       <IonItem button disabled={true}>
         <IonLabel>Disabled Button Item</IonLabel>
       </IonItem>
-      
-      <IonItem routerLink="#" routerDirection="forward">
-        <IonLabel>Clickable Item (routerLink)</IonLabel>
-      </IonItem>
     </>
   );
 }

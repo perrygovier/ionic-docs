@@ -30,6 +30,43 @@ For example, an app being viewed on an Android platform will use the `md` (Mater
 
 _Note: The **platform** and the **mode** are not the same. The platform can be set to use any mode in the [config](../developing/config.md) of an app._
 
+## Acccessing the Current Mode Programmatically
+In some cases, you may need to access the current Ionic mode programmatically within your application logic. This can be usefuly for applying conditional behavior, fetching specific assets, or performing other actions based on the active styling mode.
+
+### JavaScript
+
+When using Ionic in a plain JavaScript environment or a framework where you don't have access to Ionic's configuration service `(like with @ionic/angular)`, you can retrieve the current mode directly from the `Ionic` global object:
+
+```javascript
+const mode = Ionic.mode;
+console.log('Current Ionic Mode: ', mode); // e.g., 'ios' or 'md'
+```
+
+### Angular
+
+In an Angular Ionic application, the `Config` service provides a way to access various configuration options, including the current mode. You can inject the `Config` service and then use its `get()` method:
+
+```javascript
+import { Config } from '@ionic/angular';
+import { Component, OnInIt } from '@angular/core';
+
+@Component({
+  selector: 'app-my-component',
+  templateUrl: 'my-component.page.html',
+})
+
+export class MyComponent implements OnInIt { 
+  public currentMode: string | undefined;
+
+  constructor(public config: Config) {}
+
+  ngOnInIt() {
+    this.currentMode = this.config.get('mode);
+    console.log('Current Ionic Mode (Angular): ', this.currentMode); // e.g., 'ios' or 'md'
+  }
+}
+```
+
 ## Overriding Mode Styles
 
 Each Ionic component can be styled based on the mode. The `html` element has both a `class` and `mode` attribute with a value equal to the current mode. These can be used to override styles for any component. For example, to style an `ion-badge` to have `uppercase` text only in `ios` mode:
