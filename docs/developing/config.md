@@ -51,110 +51,133 @@ import PerPlatformOverridesExample from '@site/docs/developing/config/per-platfo
 
 <PerPlatformOverridesExample />
 
-## Reading the Config (Angular)
 
-Ionic Angular provides a `Config` provider for accessing the Ionic Config.
+## Reading the Config
+
+### Acccessing the Current Mode Programmatically
+In some cases, you may need to access the current Ionic mode programmatically within your application logic. This can be useful for applying conditional behavior, fetching specific assets, or performing other actions based on the active styling mode.
+
+#### Examples
+
+<Tabs
+  groupId="framework"
+  defaultValue="javascript"
+  values={[
+    { value: 'javascript', label: 'JavaScript' },
+    { value: 'angular', label: 'Angular' },
+    { value: 'angular-standalone', label: 'Angular-Standalone' },
+    { value: 'react', label: 'React' },
+    { value: 'vue', label: 'Vue' },
+  ]}
+>
+  <TabItem value="javascript">
+    ```javascript
+    const mode = Ionic.mode;
+    console.log('Current Ionic Mode: ', mode); // e.g., 'ios' or 'md'
+    ```
+  </TabItem>
+
+  <TabItem value="angular">
+    ```ts
+    import { Config } from '@ionic/angular';
+
+    @Component(...)
+    class AppComponent {
+      constructor(config: Config) {
+        const mode = config.get('mode');
+      }
+    }
+    ```
+  </TabItem>
+
+  <TabItem value="angular-standalone">
+    ```ts
+    import { Config } from '@ionic/angular/standalone';
+
+    @Component(...)
+    class AppComponent {
+      constructor(config: Config) {
+        const mode = config.get('mode');
+      }
+    }
+    ```
+  </TabItem>
+
+
+  <TabItem value="react">
+    ```jsx
+    import React from 'react';
+    import { IonButton, IonContent, IonPage } from '@ionic/react';
+    import { getMode } from '@ionic/core';
+
+    function ModeDisplayExample() {
+      const mode = getMode();
+
+      return (
+        <IonPage>
+          <IonContent className="ion-padding">
+            <p>The current Ionic mode is: <strong>{mode}</strong></p>
+            <IonButton color={mode === 'ios' ? 'secondary' : 'tertiary'}>
+              Mode-Dependent Button
+            </IonButton>
+          </IonContent>
+        </IonPage>
+      );
+    }
+
+    export default ModeDisplayExample;
+    ```
+  </TabItem>
+
+  <TabItem value="vue">
+    ```javascript
+    <template>
+      <ion-page>
+        <ion-content class="ion-padding">
+          <p>The current Ionic mode is: <strong>{{ mode }}</strong></p>
+          <ion-button :color="mode === 'ios' ? 'secondary' : 'tertiary'">
+            Mode-Dependent Button
+          </ion-button>
+        </ion-content>
+      </ion-page>
+    </template>
+
+    <script setup lang="ts">
+      import { IonButton, IonContent, IonPage } from '@ionic/vue';
+      import { getMode } from '@ionic/core';
+
+      const mode = getMode();
+    </script>
+    ```
+  </TabItem>
+</Tabs>
+
+### General Config Reading Methods
 
 ### get
-
+  
 |                 |                                                                                  |
 | --------------- | -------------------------------------------------------------------------------- |
 | **Description** | Returns a config value as an `any`. Returns `null` if the config is not defined. |
 | **Signature**   | `get(key: string, fallback?: any) => any`                                        |
-
-#### Examples
-
-<Tabs
-  groupId="framework"
-  defaultValue="angular"
-  values={[
-    { value: 'angular', label: 'Angular' },
-    { value: 'angular-standalone', label: 'Angular (Standalone)' },
-  ]}
->
-<TabItem value="angular">
-
-```ts
-import { Config } from '@ionic/angular';
-
-@Component(...)
-class AppComponent {
-  constructor(config: Config) {
-    const mode = config.get('mode');
-  }
-}
-```
-
-</TabItem>
-<TabItem value="angular-standalone">
-
-```ts
-import { Config } from '@ionic/angular/standalone';
-
-@Component(...)
-class AppComponent {
-  constructor(config: Config) {
-    const mode = config.get('mode');
-  }
-}
-```
-
-</TabItem>
-</Tabs>
-
+  
+  
 ### getBoolean
-
+  
 |                 |                                                                                      |
 | --------------- | ------------------------------------------------------------------------------------ |
 | **Description** | Returns a config value as a `boolean`. Returns `false` if the config is not defined. |
 | **Signature**   | `getBoolean(key: string, fallback?: boolean) => boolean`                             |
-
-#### Examples
-
-<Tabs
-  groupId="framework"
-  defaultValue="angular"
-  values={[
-    { value: 'angular', label: 'Angular' },
-    { value: 'angular-standalone', label: 'Angular (Standalone)' },
-  ]}
->
-<TabItem value="angular">
-
-```ts
-import { Config } from '@ionic/angular';
-
-@Component(...)
-class AppComponent {
-  constructor(config: Config) {
-    const swipeBackEnabled = config.getBoolean('swipeBackEnabled');
-  }
-}
-```
-
-</TabItem>
-<TabItem value="angular-standalone">
-
-```ts
-import { Config } from '@ionic/angular/standalone';
-
-@Component(...)
-class AppComponent {
-  constructor(config: Config) {
-    const swipeBackEnabled = config.getBoolean('swipeBackEnabled');
-  }
-}
-```
-
-</TabItem>
-</Tabs>
-
+  
 ### getNumber
-
+  
 |                 |                                                                                 |
 | --------------- | ------------------------------------------------------------------------------- |
 | **Description** | Returns a config value as a `number`. Returns `0` if the config is not defined. |
 | **Signature**   | `getNumber(key: string, fallback?: number) => number`                           |
+
+
+Ionic Angular provides a `Config` provider for accessing the Ionic Config.
 
 ## Interfaces
 
