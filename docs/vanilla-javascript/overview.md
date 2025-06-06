@@ -1,10 +1,10 @@
 ---
-title: 'Ionic Standalone Javascript Overview'
+title: 'Ionic Vanilla Javascript Overview'
 sidebar_label: Overview
 ---
 
 <head>
-  <title>Ionic Standalone JavaScript Overview | Standalone Javascript Documentation</title>
+  <title>Ionic Vanilla JavaScript Overview | Vanilla Javascript Documentation</title>
   <meta
     name="description"
     content="Read this overview to learn how to incorporate Ionic in your Web Development projects, without installing any frameworks."

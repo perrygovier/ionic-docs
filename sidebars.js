@@ -179,10 +179,10 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Standalone JavaScript',
+      label: 'Vanilla JavaScript',
       collapsed: false,
       items: [
-        'standalone-javascript/overview',
+        'vanilla-javascript/overview',
       ],
     },
     {
