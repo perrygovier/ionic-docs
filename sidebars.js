@@ -179,6 +179,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Standalone JavaScript',
+      collapsed: false,
+      items: [
+        'standalone-javascript/overview',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Utilities',
       collapsed: false,
       items: ['utilities/animations', 'utilities/gestures'],
