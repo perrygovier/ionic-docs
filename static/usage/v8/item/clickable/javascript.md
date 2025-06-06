@@ -11,7 +11,13 @@
   <ion-label>Button Item</ion-label>
 </ion-item>
 
-<ion-item button disabled="true">
-  <ion-label>Disabled Button Item</ion-label>
+<!--
+  Note: The 'router-link' attribute requires a configured 
+  routing library like Ionic's Web Component router for navigation to occur.
+  Since this playground is a simplified snippet, 
+  clicking these items will not trigger navigation.
+-->
+<ion-item router-link="#" router-direction="forward" onclick="alert('Navigating via JS!')">
+  <ion-label>Router Link</ion-label>
 </ion-item>
 ```
