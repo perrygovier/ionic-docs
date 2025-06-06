@@ -179,6 +179,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Vanilla JavaScript',
+      collapsed: false,
+      items: [
+        'vanilla-javascript/overview',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Utilities',
       collapsed: false,
       items: ['utilities/animations', 'utilities/gestures'],
