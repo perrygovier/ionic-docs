@@ -32,4 +32,4 @@ It's recommended to use [jsdelivr](https://www.jsdelivr.com/) to access the Fram
 
 
 ## Using Components
-To use Ionic Components, you can browse our [UI Components Library](../docs/components) and copy the `JavaScript` sample code. This code can then be modified for your purposes.
+To use Ionic Components, you can browse our [UI Components Library](../components) and copy the `JavaScript` sample code. This code can then be modified for your purposes.
