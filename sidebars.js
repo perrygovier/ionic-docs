@@ -179,6 +179,22 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Vanilla JavaScript',
+      collapsed: false,
+      items: [
+        'vanilla-javascript/overview',
+        {
+          type: 'category',
+          label: 'Build Your First App',
+          items: [
+            'vanilla-javascript/your-first-app',
+            'vanilla-javascript/your-first-app/using-ionic-components',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Utilities',
       collapsed: false,
       items: ['utilities/animations', 'utilities/gestures'],
