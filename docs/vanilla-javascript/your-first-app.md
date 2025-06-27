@@ -136,8 +136,7 @@ Download each of the following files and save them in the same folder as your `i
 <details>
 <summary>View file contents</summary>
 
-```js
-// demo.js
+```js title="demo.js"
 // Code Sample Modified from Mozilla
 // https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 
@@ -286,7 +285,7 @@ window.addEventListener("load", startup, false);
 <details>
 <summary>View file contents</summary>
 
-```css
+```css title="styles.css"
 ion-content {
     display: flex;
     justify-content: center;
@@ -394,7 +393,7 @@ This canvas will remain invisible to users but will help process image data behi
 
 
 **This is what your `index.html` file should look like at the end of this step:**
-```html
+```html title="index.html"
 <!DOCTYPE html>
 <html lang="en">
   <head>
